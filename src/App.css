@@ -1,0 +1,225 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #3b8d99, #6b6e70);
+  color: #fff;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3.8rem;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-top: 20px;
+  text-align: center;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #000; /* Black font for buttons */
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: #00d4d9;
+  transform: scale(1.05);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+  border-color: #00f2fe;
+  outline: none;
+}
+
+/* Center the main calculator card */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Vertical centering */
+  align-items: center;      /* Horizontal centering */
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+}
+
+.card {
+  background-color: #1d1d1d;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 520px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Icon buttons */
+.button-group {
+  display: flex;
+  justify-content: space-evenly; /* Distributes space evenly between buttons */
+  gap: 16px; /* Optional: Adds space between buttons */
+  width: 100%; /* Ensures the container takes full width */
+  margin-top: 20px; /* Optional: Adds space above the buttons */
+}
+
+.button-group button svg {
+  margin-right: 6px;
+}
+
+/* Nav styles without history */
+nav {
+  background-color: #1d1d1d;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #00f2fe;
+  border-radius: 5px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Remove the History option from nav bar */
+nav ul li:last-child {
+  display: none; /* Hide the last 'History' menu item */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/* Container for the buttons */
+.button-group {
+  display: flex;
+  justify-content: space-evenly; /* Distributes space evenly between buttons */
+  gap: 16px; /* Optional: Adds space between buttons */
+  width: 100%; /* Ensures the container takes full width */
+  margin-top: 20px; /* Optional: Adds space above the buttons */
+}
+
+/* Style for each button */
+.button-group button {
+  background-color: #00f2fe;
+  color: #000; /* Black text color */
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.button-group button:hover {
+  background-color: #00d4d9;
+  transform: scale(1.05);
+}
+
+/* Optional: Style for icons inside buttons */
+.button-group button svg {
+  margin-right: 8px; /* Adds space between icon and text */
+}
+/* About section styling */
+.about-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #1d1d1d;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.about-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
